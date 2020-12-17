@@ -12,6 +12,7 @@ job('NodeJS Job') {
         nodejs('nodejs_v12.14.1')
     }
     steps {
+        shell("npm install -g yarn")
         shell("yarn install")
         shell("yarn test")
     }
